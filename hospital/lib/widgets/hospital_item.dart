@@ -31,6 +31,30 @@ class _HospitalItemState extends State<HospitalItem> {
             ),
           ),
         ),
+        SliverList(
+            delegate: SliverChildListDelegate([
+          Stack(
+            children: [
+              Card(
+                color: Colors.deepPurple.withOpacity(.5),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.only(
+                      left: 10, right: 10, top: 100, bottom: 100),
+                  child: Text(
+                    '${widget.hospital.description}',
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ]))
       ],
     );
   }
